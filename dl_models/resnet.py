@@ -33,9 +33,9 @@ class BasicBlock(nn.Module):
 class TinyResNet(nn.Module):
     """适合 28×28/32×32 小图的教学版 ResNet。"""
 
-    def __init__(self, num_classes: int = 4) -> None:
+    def __init__(self, num_classes: int = 4, in_channels: int = 1) -> None:
         super().__init__()
-        self.stem = nn.Sequential(nn.Conv2d(1, 16, 3, padding=1, bias=False), nn.BatchNorm2d(16), nn.ReLU())
+        self.stem = nn.Sequential(nn.Conv2d(in_channels, 16, 3, padding=1, bias=False), nn.BatchNorm2d(16), nn.ReLU())
         self.blocks = nn.Sequential(
             BasicBlock(16, 16),
             BasicBlock(16, 32, stride=2),

@@ -1,5 +1,7 @@
 # 05｜Transformer Encoder：用注意力直接连接所有位置
 
+> 数学与反向传播详解：[注意力反向传播](../../math/05-attention-backprop.md)
+
 ## 原理
 
 缩放点积注意力：`Attention(Q,K,V)=softmax(QKᵀ/√d_k)V`。Q 决定“我要找什么”，K 决定“我包含什么”，V 是被汇总的信息。多头注意力在不同子空间并行建模。Encoder 层还包含前馈网络、残差和 LayerNorm。

@@ -1,5 +1,7 @@
 # 06｜Autoencoder 与 VAE：学习潜在表示
 
+> 数学与反向传播详解：[AE 反传与 VAE ELBO](../../math/06-autoencoder-vae-elbo.md)
+
 ## Autoencoder
 
 编码器将输入 x 压缩为 z，解码器从 z 重建 x；最小化重建损失。瓶颈迫使模型保留重要信息，但容量太大时可能只学恒等映射。它可用于降维、去噪和异常检测，但重建误差阈值必须验证。
