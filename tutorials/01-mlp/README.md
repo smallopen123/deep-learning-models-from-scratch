@@ -1,5 +1,7 @@
 # 01｜MLP：深度学习的最小完整模型
 
+> 数学与反向传播详解：[MLP、Softmax 与交叉熵反向传播](../../math/01-mlp-softmax-backprop.md)
+
 ## 原理
 
 MLP 将线性变换与非线性激活交替堆叠：`h=ReLU(XW₁+b₁)`，`logits=hW₂+b₂`。如果没有 ReLU，多层线性变换仍等价于一层，无法学习弯曲决策边界。分类使用 `CrossEntropyLoss`，它直接接收 logits；不要先 softmax。

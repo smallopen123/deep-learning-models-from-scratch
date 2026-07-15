@@ -29,6 +29,9 @@ class ModelShapeTest(unittest.TestCase):
                 self.assertTrue(any(parameter.grad is not None for parameter in model.parameters()))
 
     def test_autoencoder_shapes(self) -> None:
+        rgb_resnet = TinyResNet(num_classes=10, in_channels=3)
+        self.assertEqual(tuple(rgb_resnet(torch.randn(2, 3, 32, 32)).shape), (2, 10))
+
         inputs = torch.rand(3, 64)
         reconstruction, latent = Autoencoder()(inputs)
         self.assertEqual(tuple(reconstruction.shape), (3, 64))

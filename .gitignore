@@ -4,7 +4,8 @@ __pycache__/
 .idea/
 .vscode/
 .ipynb_checkpoints/
-data/
+data/*
+!data/tiny_sentiment.tsv
 checkpoints/
 runs/
 outputs/

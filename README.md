@@ -35,6 +35,9 @@ python examples/train_classifier.py --model transformer
 
 ## 代码导航
 
+- [`math/`](math)：链式法则以及各模型的完整反向传播数学推导。
+- [`DATASETS.md`](DATASETS.md)：每个模型对应的数据集、指标与验证规则。
+- [`experiments/`](experiments)：FashionMNIST、CIFAR-10、MNIST 和文本数据实验。
 - [`dl_models/`](dl_models)：模型结构，每个 `forward` 都标注输入输出。
 - [`examples/`](examples)：完整训练循环，包括数据、损失、优化、验证。
 - [`tests/`](tests)：模型输出形状和一次反向传播测试。
